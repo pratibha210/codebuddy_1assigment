@@ -1,0 +1,13 @@
+let arr1 = [1, 2, 3];
+    let arr2 = [2, 3, 4];
+    let arr3 = [3, 4, 5];
+    const newArr = [...arr1, ...arr2, ...arr3];
+
+    let dupChars = newArr.filter((element, index) => {
+      return newArr.indexOf(element) !== index;
+    });
+
+    const arr = newArr.filter(function (obj) {
+      return dupChars.indexOf(obj) == -1;
+    });
+    console.log(arr, "arrr");
